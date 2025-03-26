@@ -109,6 +109,24 @@
           done
         '';
 
+      system.defaults = {
+        dock.autohide = false;
+        dock.persistent-apps = [
+          "/System/Applications/Launchpad.app"
+          "/System/Applications/Mail.app"
+          "/System/Applications/Calendar.app"
+          "/Applications/Safari.app"
+          "/Applications/Asana.app"
+          "${pkgs.jetbrains.goland}/Applications/Goland.app"
+          "${pkgs.wezterm}/Applications/Wezterm.app"
+          "${pkgs.slack}/Applications/Slack.app"
+          "/System/Applications/System Settings.app"
+        ];
+        finder.FXPreferredViewStyle = "clmv";
+        loginwindow.GuestEnabled = false;
+        NSGlobalDomain.KeyRepeat = 2;
+      };
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
