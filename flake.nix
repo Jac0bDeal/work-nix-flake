@@ -110,7 +110,7 @@
         '';
 
       system.defaults = {
-        dock.autohide = false;
+        dock.autohide = true;
         dock.persistent-apps = [
           "/System/Applications/Launchpad.app"
           "/System/Applications/Mail.app"
