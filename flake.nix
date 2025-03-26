@@ -78,6 +78,7 @@
           "Magnet" = 441258766;
           "Mapper for Safari" = 1589391989;
           "Xcode" = 497799835;
+          "Yoink" = 457622435;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
