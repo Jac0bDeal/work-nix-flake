@@ -125,8 +125,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#BNYN-F1QJPF293M
-    darwinConfigurations."BNYN-F1QJPF293M" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#work
+    darwinConfigurations."work" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew
