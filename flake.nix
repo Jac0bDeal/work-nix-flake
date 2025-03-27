@@ -133,7 +133,7 @@
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
-        loginwindow.LoginwindowText = "Jacob's Hack Machine";
+        loginwindow.LoginwindowText = "Jacob's Hacking Machine";
         NSGlobalDomain.KeyRepeat = 2;
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 10;
