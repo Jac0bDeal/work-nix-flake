@@ -75,6 +75,7 @@
         casks = [
           "docker"
           "nordvpn"
+          "podman-desktop"
         ];
         masApps = {
           "AdGuard for Safari" = 1440147259;
@@ -113,8 +114,11 @@
           done
         '';
 
+      security.pam.services.sudo_local.touchIdAuth = true;
+
       system.defaults = {
         dock.autohide = true;
+        dock.mru-spaces = false;
         dock.persistent-apps = [
           "/System/Applications/Launchpad.app"
           "/System/Applications/Mail.app"
@@ -127,9 +131,13 @@
           "${pkgs.slack}/Applications/Slack.app"
           "/System/Applications/System Settings.app"
         ];
+        finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
+        loginwindow.LoginwindowText = "Jacob's Hack Machine";
         NSGlobalDomain.KeyRepeat = 2;
+        screencapture.location = "~/Pictures/screenshots";
+        screensaver.askForPasswordDelay = 10;
       };
 
       # Necessary for using flakes on this system.
