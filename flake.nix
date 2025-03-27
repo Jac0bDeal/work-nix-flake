@@ -116,6 +116,7 @@
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
           "/Applications/Safari.app"
+          "/Applications/Chrome Apps.localized/Google Meet.app"
           "/Applications/Asana.app"
           "${pkgs.jetbrains.goland}/Applications/Goland.app"
           "${pkgs.wezterm}/Applications/Wezterm.app"
