@@ -48,8 +48,6 @@
           pkgs.oh-my-posh
           pkgs.openssl_3
           pkgs.pinentry_mac
-          pkgs.podman
-          pkgs.podman-compose
           pkgs.postgresql_14
           pkgs.postman
           pkgs.python311
@@ -71,6 +69,8 @@
         brews = [
           "mas"
           "openjdk@21"
+          "podman"
+          "podman-compose"
         ];
         casks = [
           "docker"
