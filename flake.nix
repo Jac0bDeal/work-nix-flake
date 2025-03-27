@@ -21,6 +21,7 @@
           pkgs.alacritty
           pkgs.beamMinimal27Packages.elixir
           pkgs.circleci-cli
+          pkgs.docker-compose
           pkgs.dotenv-linter
           pkgs.fzf
           pkgs.google-cloud-sdk
