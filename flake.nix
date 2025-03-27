@@ -73,7 +73,6 @@
           "podman-compose"
         ];
         casks = [
-          "docker"
           "nordvpn"
           "podman-desktop"
         ];
