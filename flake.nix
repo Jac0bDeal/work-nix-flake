@@ -23,6 +23,7 @@
           pkgs.circleci-cli
           pkgs.dotenv-linter
           pkgs.fzf
+          pkgs.google-cloud-sdk
           pkgs.gh
           pkgs.git
           pkgs.gnumake
