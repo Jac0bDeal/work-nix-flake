@@ -21,7 +21,7 @@
           pkgs.alacritty
           pkgs.beamMinimal27Packages.elixir
           pkgs.circleci-cli
-          pkgs.docker-compose
+          pkgs.docker-compose # TODO: remove docker compose once podman-compose v1.4.0 releases
           pkgs.dotenv-linter
           pkgs.fzf
           pkgs.google-cloud-sdk
