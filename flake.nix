@@ -51,7 +51,6 @@
           pkgs.pinentry_mac
           pkgs.postgresql_14
           pkgs.postman
-          pkgs.powerlevel9k
           pkgs.python311
           pkgs.slack
           pkgs.stow
@@ -64,6 +63,7 @@
           pkgs.zed-editor
           pkgs.zoom-us
           pkgs.zoxide
+          pkgs.zsh-powerlevel10k
         ];
 
       homebrew = {
