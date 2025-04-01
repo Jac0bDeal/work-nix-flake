@@ -51,6 +51,7 @@
           pkgs.pinentry_mac
           pkgs.postgresql_14
           pkgs.postman
+          pkgs.powerlevel9k
           pkgs.python311
           pkgs.slack
           pkgs.stow
