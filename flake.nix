@@ -32,6 +32,7 @@
           pkgs.gnused
           pkgs.go_1_22
           pkgs.gobject-introspection
+          pkgs.gotools
           pkgs.go-migrate
           pkgs.golangci-lint
           pkgs.google-chrome
