@@ -1,5 +1,5 @@
 {
-  description = "Darwin System Flake";
+  description = "Work System Flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -30,13 +30,10 @@
           pkgs.gnumake
           pkgs.gnupg
           pkgs.gnused
-          pkgs.go_1_22
           pkgs.gobject-introspection
-          pkgs.gotools
           pkgs.go-migrate
           pkgs.golangci-lint
           pkgs.google-chrome
-          pkgs.gotestsum
           pkgs.graphviz
           pkgs.htop
           pkgs.jetbrains.goland
@@ -70,6 +67,8 @@
       homebrew = {
         enable = true;
         brews = [
+          "go@1.22"
+          "goimports"
           "mas"
           "openjdk@21"
           "podman"
