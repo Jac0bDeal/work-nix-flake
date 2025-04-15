@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
@@ -18,46 +18,25 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-          pkgs.alacritty
           pkgs.circleci-cli
           pkgs.docker-compose # TODO: remove docker compose once podman-compose v1.4.0 releases
-          pkgs.dotenv-linter
-          pkgs.fzf
           pkgs.google-cloud-sdk
-          pkgs.gh
           pkgs.git
           pkgs.gnumake
           pkgs.gnupg
           pkgs.gnused
-          pkgs.gobject-introspection
-          pkgs.go_1_23
           pkgs.go-migrate
           pkgs.golangci-lint
-          pkgs.google-chrome
-          pkgs.htop
-          pkgs.jetbrains.goland
-          pkgs.jetbrains.pycharm-community
-          pkgs.jetbrains.rust-rover
           pkgs.jq
           pkgs.mkalias
-          pkgs.ncurses
           pkgs.neovim
           pkgs.openssl_3
-          pkgs.pinentry_mac
           pkgs.postgresql_14
           pkgs.postman
           pkgs.python311
-          pkgs.slack
-          pkgs.stow
-          pkgs.sqlite
-          pkgs.the-unarchiver
           pkgs.terraform
           pkgs.tmux
-          pkgs.vegeta
           pkgs.wezterm
-          pkgs.zoom-us
-          pkgs.zoxide
-          pkgs.zsh-powerlevel10k
         ];
 
       homebrew = {
@@ -71,15 +50,10 @@
           "podman-compose"
         ];
         casks = [
-          "nordvpn"
           "podman-desktop"
         ];
         masApps = {
-          "AdGuard for Safari" = 1440147259;
-          "Kagi for Safari" = 1622835804;
-          "Magnet" = 441258766;
-          "Mapper for Safari" = 1589391989;
-          "Yoink" = 457622435;
+          "Xcode" = 497799835;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
@@ -120,20 +94,13 @@
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
           "/Applications/Safari.app"
-          "/Applications/Chrome Apps.localized/Google Meet.app"
           "/Applications/Asana.app"
-          "${pkgs.jetbrains.goland}/Applications/Goland.app"
-          "${pkgs.wezterm}/Applications/Wezterm.app"
-          "${pkgs.slack}/Applications/Slack.app"
           "/System/Applications/System Settings.app"
         ];
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
-        loginwindow.GuestEnabled = false;
-        loginwindow.LoginwindowText = "Jacob's Hacking Machine";
         NSGlobalDomain.KeyRepeat = 2;
         screencapture.location = "~/Pictures/screenshots";
-        screensaver.askForPasswordDelay = 10;
       };
 
       # Necessary for using flakes on this system.
